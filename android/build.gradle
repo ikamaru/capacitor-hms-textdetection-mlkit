@@ -9,9 +9,10 @@ buildscript {
     repositories {
         google()
         jcenter()
+        maven {url 'https://developer.huawei.com/repo/'}
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.2.1'
+        classpath 'com.android.tools.build:gradle:3.6.1'
     }
 }
 
@@ -45,6 +46,7 @@ repositories {
     google()
     jcenter()
     mavenCentral()
+    maven {url 'https://developer.huawei.com/repo/'}
 }
 
 
@@ -55,4 +57,12 @@ dependencies {
     testImplementation "junit:junit:$junitVersion"
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
+    // Import the base SDK.
+    implementation 'com.huawei.hms:ml-computer-vision-ocr:2.0.5.301'
+    // Import the Latin-based language model package.
+    implementation 'com.huawei.hms:ml-computer-vision-ocr-latin-model:2.0.5.301'
+    // Import the Japanese and Korean model package.
+    implementation 'com.huawei.hms:ml-computer-vision-ocr-jk-model:2.0.5.301'
+    // Import the Chinese and English model package.
+    implementation 'com.huawei.hms:ml-computer-vision-ocr-cn-model:2.0.5.301'
 }

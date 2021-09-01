@@ -1,3 +1,3 @@
 export interface TextDetectionMlKitPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  getTextFromImage(): Promise<{ result: any }>;
 }
